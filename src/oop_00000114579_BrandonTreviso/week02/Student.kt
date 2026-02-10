@@ -1,6 +1,6 @@
 package oop_00000114579_BrandonTreviso.week02
 
-class student (
+class Student (
     val name: String,
     val nim: String,
     val major: String
