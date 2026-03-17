@@ -47,4 +47,13 @@ fun main() {
     val weapon = Weapon.forgeStarterSword()
     println(weapon.item)
 
+    println("\n=== Modifikasi Immutability & Sinyal Event ===")
+
+    val starter = Weapon.forgeStarterSword()
+    val upgradedItem = starter.item.copy(damage = 25)
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
+
 }
