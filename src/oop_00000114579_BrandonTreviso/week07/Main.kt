@@ -41,4 +41,10 @@ fun main() {
     println("\n=== TEST GAMEMANAGER ===")
     GameManager.startGame()
     GameManager.startGame()
+
+    println(ItemRarity.LEGENDARY.dropChance)
+
+    val weapon = Weapon.forgeStarterSword()
+    println(weapon.item)
+
 }
