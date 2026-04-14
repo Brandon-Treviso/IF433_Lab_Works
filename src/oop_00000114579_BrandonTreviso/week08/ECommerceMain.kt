@@ -10,17 +10,17 @@ fun main() {
         mapOf("id" to "X01", "name" to "Unknown", "type" to "FOOD")
     )
 
-    val parser = ApiParser()
+    val Parser = ApiParser()
 
     for (raw in rawApiData) {
         try {
-            parser.parseProduct(raw)?.let { product ->
+            Parser.parseProduct(raw)?.let { product ->
                 when (product) {
                     is Electronic -> println("Electronic: ${product.name}, Warranty: ${product.warrantyMonths}")
                     is Clothing -> println("Clothing: ${product.name}, Size: ${product.size}")
                 }
 
-                parser.checkout(product)
+                Parser.checkout(product)
             }
         } catch (e: IllegalArgumentException) {
             println("Error: ${e.message}")
