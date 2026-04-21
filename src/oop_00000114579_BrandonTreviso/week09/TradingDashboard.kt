@@ -36,4 +36,6 @@ fun main() {
     println("\n=== WORST PERFORMANCE ===")
     worstPerformersString.forEach { println(it) }
 
+    println("\n=== UNIQUE PAIRS ===")
+    println(uniquePairs)
 }
