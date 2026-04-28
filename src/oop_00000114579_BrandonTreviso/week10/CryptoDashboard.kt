@@ -25,5 +25,13 @@ fun main() {
         println("Transaction ID: ${it.id}, Amount: ${it.amount}")
     }
 
+    println("\n===== SEARCH BTC =====")
 
+    val result = coinRepo.searchByName("BTC")
+
+    result.forEach {
+        if (it is Coin) {
+            println("Found: ${it.name}")
+        }
+    }
 }
