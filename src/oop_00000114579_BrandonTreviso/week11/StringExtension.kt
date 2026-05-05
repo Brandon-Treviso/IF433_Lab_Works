@@ -12,3 +12,4 @@ fun String.repeatTimes(n: Int): String {
 
 fun String?.isNullOrEmptyCustom(): Boolean {
     return this == null || this.isEmpty()
+}
